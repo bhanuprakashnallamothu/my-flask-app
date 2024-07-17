@@ -13,6 +13,7 @@ pipeline {
             steps {
                 script {
                     echo "Building Docker image..."
+                    sh "whoami"
                     sh "docker build -t ${DOCKER_IMAGE} ."
                 }
             }
